@@ -3,6 +3,7 @@ import "./index.css";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Body } from "./components/Body/Body";
 import { ErrorPage } from "./components/Error/Error";
+import { OfferBanner } from "./components/OfferBanner/OfferBanner";
 
 
 
@@ -31,14 +32,15 @@ const AppRouter = createBrowserRouter([
             {
                 path: "/",
                 element: (
-                 
-                        <Body/>
-         
+                    <>
+                        <OfferBanner />
+                        <Body />
+                    </>
                 ),
             },
-           
+
         ],
-        errorElement: <ErrorPage/>,
+        errorElement: <ErrorPage />,
     },
 ]);
 
