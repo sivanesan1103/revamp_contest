@@ -4,6 +4,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Body } from "./components/Body/Body";
 import { ErrorPage } from "./components/Error/Error";
 import { OfferBanner } from "./components/OfferBanner/OfferBanner";
+import { Navbar } from "./components/NavBar/NavBar";
 
 
 
@@ -13,15 +14,31 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const WrapperSection = () => {
     return (
-        <div className="mx-auto 2xl:container">
-            <div className="w-[70%] mx-auto">
+  
+            <div className="">
                 {/* <Header /> */}
+                <OfferBanner />
+                <Navbar/>
                 <Outlet />
                 {/* <FootSection /> */}
             </div>
-        </div>
+      
     );
 };
+
+const WrapperSection1 = () => {
+    return (
+  
+            <div className="">
+                {/* <Header /> */}
+                <Navbar/>
+                <Outlet />
+                {/* <FootSection /> */}
+            </div>
+      
+    );
+};
+
 
 
 const AppRouter = createBrowserRouter([
@@ -33,7 +50,7 @@ const AppRouter = createBrowserRouter([
                 path: "/",
                 element: (
                     <>
-                        <OfferBanner />
+                       
                         <Body />
                     </>
                 ),
