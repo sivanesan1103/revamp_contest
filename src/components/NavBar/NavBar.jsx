@@ -80,10 +80,10 @@ export const Navbar = () => {
 
                 {/* Main Menu */}
                 <div className={`${isDropdown ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-                    <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="flex flex-col p-4 mt-4 font-medium bg-transparent border border-gray-100 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                         {/* Menu Items */}
                         <li>
-                            <a href="#" className="block px-3 py-2 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">
+                            <a href="#" className="block px-3 py-2 rounded md:bg-transparent md:text-black md:p-0 " aria-current="page">
                                 Home
                             </a>
                         </li>
