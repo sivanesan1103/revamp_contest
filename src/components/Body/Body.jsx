@@ -1,18 +1,18 @@
 import Image from './girl.png'
 export const Body = () => {
     return (
-        <div className='bg-gray-300 flex justify-center p-8'>
-            <div className='w-1/2 text-center mt-24'>
-                <p className='text-6xl font-extrabold mb-3'>Start your
+        <div className='flex justify-center h-screen p-8 bg-[#B8DDE3]'>
+            <div className='w-1/2 mt-24 text-center'>
+                <p className='mb-3 text-6xl font-extrabold'>Start your
                 Own Online Learning</p>
-                <p className='font-bold text-lg mb-2'>Unlimited access to all 60+ instructors.</p>
+                <p className='mb-2 text-lg font-bold'>Unlimited access to all 60+ instructors.</p>
                 <p>You`re guaranteed to find something that`s right for you.</p>
             </div>
             <div className='w-1/2'>
                 <img 
                     src={Image} 
                     alt="Cover" 
-                    className="w-full h-full object-cover mr-20"
+                    className="object-cover w-full h-full mr-20"
                 />
             </div>
         </div>

@@ -14,11 +14,11 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gray-300 border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-            <div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+        <nav className="bg-[#B8DDE3] border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+            <div className="relative flex flex-wrap items-center justify-between max-w-screen-xl mx-auto">
                 {/* Logo and text */}
-                <div className='flex items-center space-x-4 flex-grow'>
-                    <div className=' m-3'>
+                <div className='flex items-center flex-grow space-x-4'>
+                    <div className='m-3 '>
                         <a href="#target-section" className="flex items-center space-x-3 rtl:space-x-reverse">
                             <img
                                 src="https://flowbite.com/docs/images/logo.svg"
@@ -28,7 +28,7 @@ export const Navbar = () => {
                         </a>
                     </div>
 
-                    <a className="cat-menu flex items-center space-x-2">
+                    <a className="flex items-center space-x-2 cat-menu">
                         <div className="cat-dot-icon d-inline-block">
                             {/* SVG path  */}
                         </div>
@@ -39,12 +39,12 @@ export const Navbar = () => {
                 <img src={Cart} alt='cart icon' className='w-6 h-6'/>
 
                 {/* Search Form */}
-                <div className="flex flex-grow justify-center">
-                    <form className="max-w-md flex items-center w-full">
+                <div className="flex justify-center flex-grow">
+                    <form className="flex items-center w-full max-w-md">
                         <label htmlFor="default-search" className="sr-only">Search</label>
                         <div className="relative w-full m-4">
                             <input type="search" id="default-search" className="block w-full pl-8 text-sm border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Courses" required />
-                            <button type="submit" className="absolute inset-y-0 right-0 flex items-center px-3 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <button type="submit" className="absolute inset-y-0 right-0 flex items-center px-3 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Search
                             </button>
                         </div>
@@ -55,7 +55,7 @@ export const Navbar = () => {
                 {/* Dropdown Button */}
                 <button
                     type="button"
-                    className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    className="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-dropdown"
                     aria-expanded={isDropdown}
                     onClick={toggleDropdown}
@@ -80,16 +80,16 @@ export const Navbar = () => {
 
                 {/* Main Menu */}
                 <div className={`${isDropdown ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-                    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         {/* Menu Items */}
                         <li>
-                            <a href="#" className="block py-2 px-3 text-white  rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">
+                            <a href="#" className="block px-3 py-2 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">
                                 Home
                             </a>
                         </li>
                         <li className="relative">
                             <button
-                                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                                className="flex items-center justify-between w-full px-3 py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                                 onClick={toggleDropdownSub}
                             >
                                 Dropdown{" "}
@@ -139,7 +139,7 @@ export const Navbar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                             >
                                 Services
                             </a>
@@ -147,7 +147,7 @@ export const Navbar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                             >
                                 Pricing
                             </a>
@@ -155,7 +155,7 @@ export const Navbar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                             >
                                 Contact
                             </a>
