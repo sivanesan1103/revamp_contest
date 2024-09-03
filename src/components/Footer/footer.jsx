@@ -56,15 +56,6 @@ function FooterSection () {
                 </div>
                 </div>
 
-                <div class="mt-8 text-center">
-                    <div>
-                        <p class="text-gray-400 text-sm">
-                            © {<script>document.write(new Date().getFullYear())</script>} Website Designed By
-                            <a href="https://www.linkedin.com/in/sivanesan-k03/" class="text-blue-500 hover:underline" target="_blank"> Sivanesan</a> and
-                            <a href="https://www.linkedin.com/in/dhayananthgs" class="text-blue-500 hover:underline" target="_blank"> Dhayananth</a>
-                        </p>
-                    </div>
-                </div>
         </div>
     </div>
     );

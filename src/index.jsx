@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./hover.css";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Body } from "./components/Body/Body";
 import { ErrorPage } from "./components/Error/Error";
@@ -8,6 +9,7 @@ import { Navbar } from "./components/NavBar/NavBar";
 import CardSection from "./components/Card/card";
 import FooterSection from "./components/Footer/footer";
 import TopInstructors from "./components/Top_Instructors/Top_Instructors";
+import { CourseCard } from "./components/courseCard/courseCard";
 
 
 
@@ -19,10 +21,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 const WrapperSection = () => {
     return (
   
-            <div className="">
+            <div >
                 {/* <Header /> */}
-                <OfferBanner />
-                <Navbar/>
+            
                 <Outlet />
                
                 <FooterSection />
@@ -32,6 +33,23 @@ const WrapperSection = () => {
       
     );
 };
+
+
+// const WrapperCourses = () => {
+//     return (
+  
+//             <div className="">
+//                 {/* <Header /> */}
+            
+//                 <Outlet />
+               
+//                 <FooterSection />
+                
+//                 {/* <FootSection /> */}
+//             </div>
+      
+//     );
+// };
 
 // const WrapperSection1 = () => {
 //     return (
@@ -52,22 +70,26 @@ const AppRouter = createBrowserRouter([
     {
         path: "/",
         element: <WrapperSection />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
                 element: (
                     <>
-                       
+                        <OfferBanner />
+                        <Navbar />
                         <Body />
                         <CardSection />
-                        <TopInstructors/>
-                        
+                        <TopInstructors />
                     </>
                 ),
             },
-
+            {
+                path: "/course",
+                element: <CourseCard />, // Replace 'CourseComponent' with your actual course component
+            },
+            // Add other routes here
         ],
-        errorElement: <ErrorPage />,
     },
 ]);
 
