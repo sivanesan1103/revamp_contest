@@ -7,7 +7,8 @@ import { OfferBanner } from "./components/OfferBanner/OfferBanner";
 import { Navbar } from "./components/NavBar/NavBar";
 import CardSection from "./components/Card/card";
 import FooterSection from "./components/Footer/footer";
-import PriceCard from "./components/price";
+import TopInstructors from "./components/Top_Instructors/Top_Instructors";
+
 
 
 
@@ -23,7 +24,7 @@ const WrapperSection = () => {
                 <OfferBanner />
                 <Navbar/>
                 <Outlet />
-                <PriceCard />
+               
                 <FooterSection />
                 
                 {/* <FootSection /> */}
@@ -59,6 +60,8 @@ const AppRouter = createBrowserRouter([
                        
                         <Body />
                         <CardSection />
+                        <TopInstructors/>
+                        
                     </>
                 ),
             },

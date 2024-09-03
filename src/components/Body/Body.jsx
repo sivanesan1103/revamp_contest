@@ -1,13 +1,17 @@
 import Image from './girl.png'
+import BlurFade from "@/components/magicui/blur-fade";
+import SparklesText from "@/components/magicui/sparkles-text";
 
 export const Body = () => {
     return (
 <div className='flex flex-col md:flex-row justify-center items-center min-h-screen p-6 md:p-16 bg-[#B8DDE3]'>
   {/* Text Section */}
+  <BlurFade delay={0.50} inView>
   <div className='text-center md:text-left md:w-1/2 lg:mt-4 md:mt-4'>
-    <p className='mb-4 text-3xl font-extrabold md:text-4xl lg:text-5xl'>
-      Start your Own Online Learning
-    </p>
+  
+      
+      <SparklesText className='mb-4 text-3xl font-extrabold md:text-4xl lg:text-5xl' text="Start your Own Online Learning" />
+    
     <p className='mb-3 font-bold text-md md:text-lg'>
       Unlimited access to all 60+ instructors.
     </p>
@@ -15,6 +19,7 @@ export const Body = () => {
       You're guaranteed to find something that’s right for you.
     </p>
   </div>
+  </BlurFade>
 
   {/* Image Section */}
   <div className='flex items-center justify-center w-full mt-8 md:mt-0 md:w-1/2'>

@@ -21,29 +21,29 @@ const teamMembers = [
   },
 ];
 
-function PriceCard () {
+function TopInstructors () {
   return (
-    <div className="bg-gray-100 py-12 m-10 rounded-lg">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div className="py-12 m-10 bg-gray-100 rounded-lg">
+      <div className="max-w-5xl px-4 mx-auto text-center sm:px-6 lg:px-8">
 
         <h2 className="text-3xl font-extrabold text-gray-900">Top Instructors</h2>
         <p className="mt-4 text-lg leading-6 text-gray-600">
           Meet the passionate individuals behind our success.</p>
 
-        <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 mt-10 sm:grid-cols-2 md:grid-cols-3">
           {teamMembers.map((member) => (
             <div
               key={member.name}
-              className="bg-white shadow-md rounded-lg overflow-hidden"
+              className="overflow-hidden bg-white rounded-lg shadow-md"
             >
               <img
-                className="w-full h-48 object-cover"
+                className="object-cover w-full h-48"
                 src={member.imageUrl}
                 alt={member.name}
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 text-left">{member.name}</h3>
-                <div className="flex justify-between items-center">
+                <h3 className="text-xl font-semibold text-left text-gray-900">{member.name}</h3>
+                <div className="flex items-center justify-between">
                   <p className="mt-2 text-gray-600">{member.role}</p>
                   <p className="mt-2 text-gray-600">{member.rating}⭐</p>
                 </div>
@@ -56,4 +56,4 @@ function PriceCard () {
   );
 };
 
-export default PriceCard;
+export default TopInstructors;
