@@ -6,6 +6,8 @@ import { ErrorPage } from "./components/Error/Error";
 import { OfferBanner } from "./components/OfferBanner/OfferBanner";
 import { Navbar } from "./components/NavBar/NavBar";
 import CardSection from "./components/Card/card";
+import FooterSection from "./components/Footer/footer";
+import PriceCard from "./components/price";
 
 
 
@@ -21,6 +23,8 @@ const WrapperSection = () => {
                 <OfferBanner />
                 <Navbar/>
                 <Outlet />
+                <PriceCard />
+                <FooterSection />
                 
                 {/* <FootSection /> */}
             </div>

@@ -1,11 +1,10 @@
 import Image from './girl.png'
+
 export const Body = () => {
     return (
-
-
-<div className='flex flex-col md:flex-row justify-center items-center min-h-screen p-6 md:p-12 bg-[#B8DDE3]'>
+<div className='flex flex-col md:flex-row justify-center items-center min-h-screen p-6 md:p-16 bg-[#B8DDE3]'>
   {/* Text Section */}
-  <div className='text-center md:text-left md:w-1/2 lg:mt-12 md:mt-16'>
+  <div className='text-center md:text-left md:w-1/2 lg:mt-4 md:mt-4'>
     <p className='mb-4 text-3xl font-extrabold md:text-4xl lg:text-5xl'>
       Start your Own Online Learning
     </p>
