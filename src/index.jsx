@@ -26,18 +26,18 @@ const WrapperSection = () => {
     );
 };
 
-const WrapperSection1 = () => {
-    return (
+// const WrapperSection1 = () => {
+//     return (
   
-            <div className="">
-                {/* <Header /> */}
-                <Navbar/>
-                <Outlet />
-                {/* <FootSection /> */}
-            </div>
+//             <div className="">
+//                 {/* <Header /> */}
+//                 <Navbar/>
+//                 <Outlet />
+//                 {/* <FootSection /> */}
+//             </div>
       
-    );
-};
+//     );
+// };
 
 
 

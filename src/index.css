@@ -14,3 +14,7 @@
     gap: 8px;
   }
   
+.imgCover {
+  background-image: url('./girl.png');
+  background-position: cover;
+}
