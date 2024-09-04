@@ -5,83 +5,26 @@ import BoxReveal from "@/components/magicui/box-reveal";
 
 
 
-export const CourseCard = () => {
-  const products = [
-    {
-      id: 1,
-      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-      image: "https://img.freepik.com/free-vector/modern-hosting-concept_23-2147972600.jpg",
-      price: "$599",
-      rating: 5.0,
-    },
-    {
-      id: 2,
-      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-      image: "https://img.freepik.com/free-vector/modern-hosting-concept_23-2147972600.jpg",
-      price: "$599",
-      rating: 3.0,
-    },
-    {
-      id: 3,
-      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-      image: "https://img.freepik.com/free-vector/modern-hosting-concept_23-2147972600.jpg",
-      price: "$599",
-      rating: 5.0,
-    },
-    {
-      id: 4,
-      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-      image: "https://img.freepik.com/free-vector/modern-hosting-concept_23-2147972600.jpg",
-      price: "$599",
-      rating: 5.0,
-    },
-    {
-      id: 5,
-      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-      image: "https://img.freepik.com/free-vector/modern-hosting-concept_23-2147972600.jpg",
-      price: "$599",
-      rating: 4.0,
-    },
-    {
-      id:6,
-      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-      image: "https://img.freepik.com/free-vector/modern-hosting-concept_23-2147972600.jpg",
-      price: "$599",
-      rating: 5.0,
-    },
-    {
-      id: 7,
-      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-      image: "https://img.freepik.com/free-vector/modern-hosting-concept_23-2147972600.jpg",
-      price: "$599",
-      rating: 5.0,
-    },
-    {
-      id: 8,
-      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
-      image: "https://img.freepik.com/free-vector/modern-hosting-concept_23-2147972600.jpg",
-      price: "$599",
-      rating: 5.0,
-    },
-    // Add more products here
-  ];
+export const CourseCard = (props) => {
 
+  let productsList = props.productList;
   return (
     <div className="mx-auto my-12 2xl:container">
       <div className="w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-        {products.map((product) => (
+        {productsList.map((product) => (
           
           <div
-            key={product.id}
-            className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-          >
-            <a href="#">
-              <img
-                className="p-8 rounded-t-lg"
-                src={product.image}
-                alt={product.title}
-              />
-            </a>
+          key={product.id}
+          className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="#">
+            <img
+              className="object-cover w-full h-48 rounded-t-lg"
+              src={product.image}
+              alt={product.title}
+            />
+          </a>
+     
             
             <div className="px-5 pb-5">
             <BoxReveal boxColor={"#B8DDE3"} duration={0.5}>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Cart from './cart.svg';
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
     const [isDropdown, setIsDropdown] = useState(false);
@@ -115,9 +116,10 @@ export const Navbar = () => {
                                 <ul className="py-2 text-sm text-gray-700 dark:text-gray-400">
                                 <li>
                                     {/* change to link */}
-                                        <a href="/courses" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                        All courses
-                                        </a>
+                                    <Link to="/courses" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> All courses</Link>
+                                        {/* <a href=""  >
+                                       
+                                        </a> */}
                                     </li>
                                     <li>
                                         <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">

@@ -1,16 +1,25 @@
 import { useState } from 'react';
 import { CourseHeader } from "../CourseHeader/CourseHeader";
 
+import { products } from "../../api/WebDevelopment";
+import { products2 } from "../../api/MobileDevelopment";
+import { products3 } from "../../api/ITCertifications";
+import { CourseCard } from '../courseCard/courseCard';
+
 export const CourseNavigation = () => {
     const [name, setName] = useState('All Courses');
+    const [productList, setProductList] = useState([...products, ...products2, ...products3]);
 
     const change = (num) => {
         if (num === 1) {
             setName("Web Development");
+            setProductList(products);
         } else if (num === 2) {
             setName("Mobile Development");
+            setProductList(products2);
         } else if (num === 3) {
             setName("IT Certifications");
+            setProductList(products3);
         }
     };
 
@@ -55,6 +64,7 @@ export const CourseNavigation = () => {
                     </button>
                 </div>
             </div>
+            <CourseCard productList={productList} />
         </>
     );
 };
