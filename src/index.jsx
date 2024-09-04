@@ -10,6 +10,8 @@ import CardSection from "./components/Card/card";
 import FooterSection from "./components/Footer/footer";
 import TopInstructors from "./components/Top_Instructors/Top_Instructors";
 import { CourseCard } from "./components/courseCard/courseCard";
+import { CourseHeader } from "./components/CourseHeader/CourseHeader";
+import { CourseNavigation } from "./components/CourseNavigation/CourseNavigation";
 
 
 
@@ -23,7 +25,7 @@ const WrapperSection = () => {
   
             <div >
                 {/* <Header /> */}
-            
+                <Navbar />
                 <Outlet />
                
                 <FooterSection />
@@ -77,7 +79,7 @@ const AppRouter = createBrowserRouter([
                 element: (
                     <>
                         <OfferBanner />
-                        <Navbar />
+                     
                         <Body />
                         <CardSection />
                         <TopInstructors />
@@ -85,8 +87,13 @@ const AppRouter = createBrowserRouter([
                 ),
             },
             {
-                path: "/course",
-                element: <CourseCard />, // Replace 'CourseComponent' with your actual course component
+                path: "/courses",
+                element:(<>
+                <CourseHeader />
+                <CourseNavigation />
+                <CourseCard />
+              
+                </> ), // Replace 'CourseComponent' with your actual course component
             },
             // Add other routes here
         ],
