@@ -1,5 +1,6 @@
 
 
+import BoxReveal from "@/components/magicui/box-reveal";
 
 
 
@@ -18,7 +19,7 @@ export const CourseCard = () => {
       title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
       image: "https://img.freepik.com/free-vector/modern-hosting-concept_23-2147972600.jpg",
       price: "$599",
-      rating: 5.0,
+      rating: 3.0,
     },
     {
       id: 3,
@@ -39,7 +40,7 @@ export const CourseCard = () => {
       title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
       image: "https://img.freepik.com/free-vector/modern-hosting-concept_23-2147972600.jpg",
       price: "$599",
-      rating: 5.0,
+      rating: 4.0,
     },
     {
       id:6,
@@ -69,6 +70,7 @@ export const CourseCard = () => {
     <div className="mx-auto my-12 2xl:container">
       <div className="w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {products.map((product) => (
+          
           <div
             key={product.id}
             className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
@@ -80,13 +82,20 @@ export const CourseCard = () => {
                 alt={product.title}
               />
             </a>
+            
             <div className="px-5 pb-5">
+            <BoxReveal boxColor={"#B8DDE3"} duration={0.5}>
+
+              <div>
               <a href="#">
                 <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
                   {product.title}
                 </h5>
               </a>
+              </div></BoxReveal>
+              
               <div className="flex items-center mt-2.5 mb-5">
+              <BoxReveal boxColor={"#B8DDE3"} duration={0.5}>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, index) => (
                     <svg
@@ -105,6 +114,7 @@ export const CourseCard = () => {
                     </svg>
                   ))}
                 </div>
+                </BoxReveal>
                 <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">
                   {product.rating.toFixed(1)}
                 </span>
@@ -122,6 +132,7 @@ export const CourseCard = () => {
               </div>
             </div>
           </div>
+        
         ))}
       </div>
     </div>
