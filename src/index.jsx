@@ -96,7 +96,7 @@ const AppRouter = createBrowserRouter([
             {
                 path: "/courses",
                 element:(<>
-                <Price/>
+      
                 <CourseNavigation />
         
               
