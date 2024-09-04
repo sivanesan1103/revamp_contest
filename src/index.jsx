@@ -9,7 +9,7 @@ import { Navbar } from "./components/NavBar/NavBar";
 import CardSection from "./components/Card/card";
 import FooterSection from "./components/Footer/footer";
 import TopInstructors from "./components/Top_Instructors/Top_Instructors";
-import { CourseCard } from "./components/courseCard/courseCard";
+
 import { CourseNavigation } from "./components/CourseNavigation/CourseNavigation";
 import SkilllineSection from "./components/SkillCard/SkillCard";
 import ProudCards from "./components/ProudSection/Proudcard";
@@ -96,7 +96,7 @@ const AppRouter = createBrowserRouter([
                 element:(<>
                 
                 <CourseNavigation />
-                <CourseCard />
+        
               
                 </> ), // Replace 'CourseComponent' with your actual course component
             },
