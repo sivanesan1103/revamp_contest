@@ -12,6 +12,8 @@ import TopInstructors from "./components/Top_Instructors/Top_Instructors";
 
 
 import { CourseNavigation } from "./components/CourseNavigation/CourseNavigation";
+import { Banner } from "flowbite-react";
+import { Price } from "./components/Price/Price";
 
 
 
@@ -89,8 +91,17 @@ const AppRouter = createBrowserRouter([
             {
                 path: "/courses",
                 element:(<>
-                
+                <Price/>
                 <CourseNavigation />
+        
+              
+                </> ), 
+            },
+            {
+                path: "/Pricing",
+                element:(<>
+                <Price/>
+             
         
               
                 </> ), // Replace 'CourseComponent' with your actual course component
