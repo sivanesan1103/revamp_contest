@@ -29,7 +29,7 @@ const WrapperSection = () => {
   
             <div >
                 {/* <Header /> */}
-                
+       
                 <Outlet />
                
                 <FooterSection />
@@ -41,21 +41,21 @@ const WrapperSection = () => {
 };
 
 
-// const WrapperCourses = () => {
-//     return (
+const WrapperCourses = () => {
+    return (
   
-//             <div className="">
-//                 {/* <Header /> */}
+            <div className="">
+                {/* <Header /> */}
             
-//                 <Outlet />
+                <Outlet />
                
-//                 <FooterSection />
+                <FooterSection />
                 
-//                 {/* <FootSection /> */}
-//             </div>
+                {/* <FootSection /> */}
+            </div>
       
-//     );
-// };
+    );
+};
 
 // const WrapperSection1 = () => {
 //     return (
@@ -82,7 +82,7 @@ const AppRouter = createBrowserRouter([
                 path: "/",
                 element: (
                     <>
-                        <OfferBanner />
+                       
                         <Navbar />
                         <Body />
                         <CardSection />
