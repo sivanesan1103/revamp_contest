@@ -10,8 +10,10 @@ import CardSection from "./components/Card/card";
 import FooterSection from "./components/Footer/footer";
 import TopInstructors from "./components/Top_Instructors/Top_Instructors";
 import { CourseCard } from "./components/courseCard/courseCard";
-
 import { CourseNavigation } from "./components/CourseNavigation/CourseNavigation";
+import SkilllineSection from "./components/SkillCard/SkillCard";
+import ProudCards from "./components/ProudSection/Proudcard";
+import Download from "./components/Download/DownloadCard";
 
 
 
@@ -83,6 +85,9 @@ const AppRouter = createBrowserRouter([
                         <Body />
                         <CardSection />
                         <TopInstructors />
+                        <SkilllineSection />
+                        <ProudCards />
+                        <Download />
                     </>
                 ),
             },
