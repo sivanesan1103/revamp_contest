@@ -10,8 +10,10 @@ import CardSection from "./components/Card/card";
 import FooterSection from "./components/Footer/footer";
 import TopInstructors from "./components/Top_Instructors/Top_Instructors";
 
-
 import { CourseNavigation } from "./components/CourseNavigation/CourseNavigation";
+import SkilllineSection from "./components/SkillCard/SkillCard";
+import ProudCards from "./components/ProudSection/Proudcard";
+import Download from "./components/Download/DownloadCard";
 import { Banner } from "flowbite-react";
 import { Price } from "./components/Price/Price";
 
@@ -85,6 +87,9 @@ const AppRouter = createBrowserRouter([
                         <Body />
                         <CardSection />
                         <TopInstructors />
+                        <SkilllineSection />
+                        <ProudCards />
+                        <Download />
                     </>
                 ),
             },

@@ -1,29 +1,32 @@
 import React from 'react';
+import Teacher1 from './teacher-1.jpg';
+import Teacher2 from './teacher-2.jpg';
+import Teacher3 from './teacher-3.jpg';
 
 const teamMembers = [
   {
     name: 'John Doe',
     role: 'CEO',
     rating: '4.5',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: {Teacher1},
   },
   {
     name: 'Jane Smith',
     role: 'CTO',
     rating: '4.7',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: {Teacher2},
   },
   {
     name: 'Alice Johnson',
     role: 'Lead Developer',
     rating: '4.3',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: {Teacher3},
   },
 ];
 
 function TopInstructors () {
   return (
-    <div className="py-12 m-10 bg-gray-100 rounded-lg">
+    <div className="py-12 m-10 bg-gray-50 rounded-lg">
       <div className="max-w-5xl px-4 mx-auto text-center sm:px-6 lg:px-8">
 
         <h2 className="text-3xl font-extrabold text-gray-900">Top Instructors</h2>
