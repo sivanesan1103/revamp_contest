@@ -4,9 +4,9 @@ import student from './student.jpg';
 
 const SkilllineSection = () => {
   return (
-    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">What Is <span className="text-indigo-600">Skillline?</span></h2>
+    <div className="px-4 py-16 bg-white sm:px-6 lg:px-8">
+        <div className="mx-auto text-center max-w-7xl">
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">What Is <span className="text-blue-600">Skillline?</span></h2>
             <p className="mt-4 text-lg text-gray-600">
                 Sloshed faff about me old mucker blatant bubble and squeak hanky panky
                 some dodgy chav bevvy arse chimney pot I, ruddy plastered buggered
@@ -15,31 +15,31 @@ const SkilllineSection = () => {
             </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-8">
-            <div className="relative bg-gray-100 rounded-lg shadow-md overflow-hidden">
+        <div className="grid grid-cols-1 mt-10 gap-y-8 md:grid-cols-2 md:gap-x-8">
+            <div className="relative overflow-hidden bg-gray-100 rounded-lg shadow-md">
                 <img
                     src={student}
                     alt="Online Learning"
-                    className="h-96 w-full object-cover"
+                    className="object-cover w-full h-96"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-10 hover:bg-opacity-50 duration-700 flex flex-col items-center justify-center text-white">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white duration-700 bg-black bg-opacity-10 hover:bg-opacity-50">
                     <h3 className="text-xl font-bold">Mostly Online Learning</h3>
-                    <button className="mt-4 px-4 py-2 rounded-lg bg-transparent border text-white hover:bg-white hover:text-black">
+                    <button className="px-4 py-2 mt-4 text-white bg-transparent border rounded-lg hover:bg-white hover:text-black">
                     Start a class today
                     </button>
                 </div>
             </div>
 
         
-            <div className="relative bg-gray-100 rounded-lg shadow-md overflow-hidden">
+            <div className="relative overflow-hidden bg-gray-100 rounded-lg shadow-md">
                 <img
                     src={teacher}
                     alt="Become an Instructor"
-                    className="h-96 w-full object-cover"
+                    className="object-cover w-full h-96"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-10 hover:bg-opacity-50 duration-700 flex flex-col items-center justify-center text-white">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white duration-700 bg-black bg-opacity-10 hover:bg-opacity-50">
                     <h3 className="text-xl font-bold">Become an Instructor</h3>
-                    <button className="mt-4 px-4 py-2 bg-transparent border text-white hover:bg-white hover:text-black rounded-lg">
+                    <button className="px-4 py-2 mt-4 text-white bg-transparent border rounded-lg hover:bg-white hover:text-black">
                     Start teaching
                     </button>
                 </div>

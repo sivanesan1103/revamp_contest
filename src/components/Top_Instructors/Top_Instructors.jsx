@@ -8,31 +8,30 @@ const teamMembers = [
     name: 'John Doe',
     role: 'CEO',
     rating: '4.5',
-    imageUrl: {Teacher1},
+    imageUrl: Teacher1, // Directly use the imported image
   },
   {
     name: 'Jane Smith',
     role: 'CTO',
     rating: '4.7',
-    imageUrl: {Teacher2},
+    imageUrl: Teacher2, // Directly use the imported image
   },
   {
     name: 'Alice Johnson',
     role: 'Lead Developer',
     rating: '4.3',
-    imageUrl: {Teacher3},
+    imageUrl: Teacher3, // Directly use the imported image
   },
 ];
 
-function TopInstructors () {
+function TopInstructors() {
   return (
-    <div className="py-12 m-10 bg-gray-50 rounded-lg">
+    <div className="py-12 m-10 rounded-lg bg-gray-50">
       <div className="max-w-5xl px-4 mx-auto text-center sm:px-6 lg:px-8">
-
         <h2 className="text-3xl font-extrabold text-gray-900">Top Instructors</h2>
         <p className="mt-4 text-lg leading-6 text-gray-600">
-          Meet the passionate individuals behind our success.</p>
-
+          Meet the passionate individuals behind our success.
+        </p>
         <div className="grid grid-cols-1 gap-10 mt-10 sm:grid-cols-2 md:grid-cols-3">
           {teamMembers.map((member) => (
             <div
@@ -42,7 +41,7 @@ function TopInstructors () {
               <img
                 className="object-cover w-full h-48"
                 src={member.imageUrl}
-                alt={member.name}
+                alt={`Photo of ${member.name}`}
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-left text-gray-900">{member.name}</h3>
@@ -57,6 +56,6 @@ function TopInstructors () {
       </div>
     </div>
   );
-};
+}
 
 export default TopInstructors;
