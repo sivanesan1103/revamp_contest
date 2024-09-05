@@ -16,6 +16,7 @@ import ProudCards from "./components/ProudSection/Proudcard";
 import Download from "./components/Download/DownloadCard";
 import { Banner } from "flowbite-react";
 import { Price } from "./components/Price/Price";
+import ImageSlider from "./components/ImageSlider/Slider";
 
 
 
@@ -89,6 +90,7 @@ const AppRouter = createBrowserRouter([
                         <TopInstructors />
                         <SkilllineSection />
                         <ProudCards />
+                        <ImageSlider />
                         <Download />
                     </>
                 ),
