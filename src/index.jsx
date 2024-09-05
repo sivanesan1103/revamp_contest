@@ -41,21 +41,21 @@ const WrapperSection = () => {
 };
 
 
-const WrapperCourses = () => {
-    return (
+// const WrapperCourses = () => {
+//     return (
   
-            <div className="">
-                {/* <Header /> */}
+//             <div className="">
+//                 {/* <Header /> */}
             
-                <Outlet />
+//                 <Outlet />
                
-                <FooterSection />
+//                 <FooterSection />
                 
-                {/* <FootSection /> */}
-            </div>
+//                 {/* <FootSection /> */}
+//             </div>
       
-    );
-};
+//     );
+// };
 
 // const WrapperSection1 = () => {
 //     return (
