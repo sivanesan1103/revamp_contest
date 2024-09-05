@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import logo from './e-learning-global-community.png';
-export const Banner1 = ({ isWhiteBg ,name}) => {
+
+export const Banner1 = ({ isWhiteBg, name }) => {
   const [isDropdown, setIsDropdown] = useState(false);
   const [isDropdownSub, setIsDropdownSub] = useState(false);
 
   const toggleDropdown = () => setIsDropdown(prev => !prev);
   const toggleDropdownSub = () => setIsDropdownSub(prev => !prev);
-  const bannerImg ="https://www.shutterstock.com/image-photo/students-taking-exam-classroom-education-260nw-1289569291.jpg";
+
+  const bannerImg = "https://www.shutterstock.com/image-photo/students-taking-exam-classroom-education-260nw-1289569291.jpg";
   const navbarStyle = isWhiteBg ? 'bg-white shadow-md text-black' : 'bg-transparent text-black';
 
   return (
@@ -16,74 +18,49 @@ export const Banner1 = ({ isWhiteBg ,name}) => {
       <nav className={`top-0 left-0 w-full z-50 ${navbarStyle} border-gray-200 dark:bg-gray-900 dark:border-gray-700`}>
         <div className="relative flex items-center justify-between max-w-screen-xl px-4 py-2 mx-auto">
           {/* Logo */}
-      <div className='flex items-center'>
-  <Link to='/' className="flex items-center space-x-2">
-    <img
-      src={logo}
-      className="h-12" // Increase the height here
-      alt="Logo"
-    />
-  </Link>
-
-
-          </div>
-
-          {/* Category Button */}
-          <div className='items-center hidden md:flex'>
-          <Link  to="/" className="flex items-center px-2 py-1 font-bold text-black bg-transparent text-md">
-              <span>Thinkory</span>
-              </Link>
-          </div>
-
-          {/* Search Form */}
-          <div className="flex-grow mx-4">
-            <form className="relative flex items-center">
-              <label htmlFor="default-search" className="sr-only">Search</label>
-              <input 
-                type="search" 
-                id="default-search" 
-                className="block w-full py-2 pl-10 pr-4 text-sm transition border border-gray-300 rounded-full bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Search Courses" 
-                required 
+          <div className='flex items-center'>
+            <Link to='/' className="flex items-center space-x-2">
+              <img
+                src={logo}
+                className="h-12" 
+                alt="Logo"
               />
-              <button 
-                type="submit" 
-                className="absolute inset-y-0 right-0 flex items-center px-3 text-sm font-medium text-white transition bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Search
-              </button>
-            </form>
+            </Link>
+      
+            <Link to="/" className="flex items-center px-2 py-1 font-bold text-black bg-transparent text-md">
+              <span>Thinkory</span>
+            </Link>
           </div>
 
           {/* Dropdown Button for Mobile */}
-          <button
-            type="button"
-            className="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-dropdown"
-            aria-expanded={isDropdown}
-            onClick={toggleDropdown}
+     <button
+          type="button"
+          className="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-dropdown"
+          aria-expanded={isDropdown}
+          onClick={toggleDropdown}
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
           >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
 
           {/* Main Menu */}
-          <div className={`${isDropdown ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-            <ul className="flex flex-col p-4 mt-4 font-medium bg-transparent border border-gray-100 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+          <div className={`${isDropdown ? 'block' : 'hidden'} md:flex md:w-auto`}>
+          <ul className="absolute right-0 z-50 flex flex-col p-4 mt-2 font-medium bg-white rounded-lg 0 top-16 dark:bg-gray-900 dark:border-gray-700 md:relative md:top-0 md:mt-0 md:space-x-8 md:flex-row md:bg-transparent">
               {/* Menu Items */}
               <li className="relative">
                 <button
@@ -142,12 +119,12 @@ export const Banner1 = ({ isWhiteBg ,name}) => {
                 </Link>
               </li>
               <li>
-              <Link
-                to="/Contact"
-                className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Contact
-              </Link>
+                <Link
+                  to="/Contact"
+                  className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
@@ -156,17 +133,15 @@ export const Banner1 = ({ isWhiteBg ,name}) => {
 
       {/* Banner Section */}
       <section 
-  className="relative w-full h-[50vh] flex items-center justify-center bg-gray-200"
-  style={{ backgroundImage: `url(${bannerImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black opacity-50"></div>
-  
-  {/* Text */}
-  <h1 className="relative z-10 text-4xl font-bold text-white">{name}</h1>
-</section>
-
-
+        className="relative w-full h-[50vh] flex items-center justify-center bg-gray-200"
+        style={{ backgroundImage: `url(${bannerImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        
+        {/* Text */}
+        <h1 className="relative z-10 text-4xl font-bold text-white">{name}</h1>
+      </section>
     </div>
   );
 };

@@ -13,7 +13,7 @@ export const CourseHeader = ({ name }) => {
                 <p>{nameHeader}</p>
             </div>
 
-            <div className="text-2xl ml-9">
+            <div className=" ml-9">
                 <p>Courses to get you started</p>
             </div>
 

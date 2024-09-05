@@ -1,28 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import Cart from './cart.svg';
 import { Link } from "react-router-dom";
-import logo from './e-learning-global-community.png';
 
 export const Navbar = () => {
   const [isDropdown, setIsDropdown] = useState(false);
-  const [isDropdownSub, setIsDropdownSub] = useState(true);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const [navbarStyle, setNavbarStyle] = useState('bg-transparent text-black');
 
   const toggleDropdown = () => {
     setIsDropdown(!isDropdown);
   };
 
-  const toggleDropdownSub = () => {
-    setIsDropdownSub(!isDropdownSub);
+  const toggleDropdownSub = (dropdownName) => {
+    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
-  // Handle scroll to change navbar style
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setNavbarStyle('bg-white shadow-md text-black'); // White background with shadow on scroll
+        setNavbarStyle('bg-white shadow-md text-black');
       } else {
-        setNavbarStyle('bg-transparent text-black'); // Transparent background when at the top
+        setNavbarStyle('bg-transparent text-black');
       }
     };
 
@@ -38,22 +36,20 @@ export const Navbar = () => {
       <div className="relative flex items-center justify-between max-w-screen-xl px-4 py-2 mx-auto">
         {/* Logo */}
         <div className='flex items-center'>
-  <Link to='/' className="flex items-center space-x-2">
-    <img
-      src={logo}
-      className="h-12" // Increase the height here
-      alt="Logo"
-    />
-  </Link>
-</div>
-
+          <Link to='/' className="flex items-center space-x-2">
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              className="h-8"
+              alt="Flowbite Logo"
+            />
+          </Link>
+        </div>
 
         {/* Category Button */}
         <div className='items-center hidden md:flex'>
-        <Link className="flex items-center px-2 py-1 font-bold text-black bg-transparent text-md" to='/'>
+          <Link className="flex items-center px-2 py-1 font-bold text-black bg-transparent text-md" to='/'>
             <span>Thinkory</span>
-            
-          </ Link>
+          </Link>
         </div>
 
         {/* Search Form */}
@@ -108,13 +104,13 @@ export const Navbar = () => {
         </button>
 
         {/* Main Menu */}
-        <div className={`${isDropdown ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-          <ul className="flex flex-col p-4 mt-4 font-medium bg-transparent border border-gray-100 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+        <div className={`relative ${isDropdown ? 'block' : 'hidden'} md:flex md:items-center md:space-x-8`}>
+          <ul className="absolute right-0 z-50 flex flex-col p-4 mt-2 font-medium bg-white rounded-lg 0 top-16 dark:bg-gray-900 dark:border-gray-700 md:relative md:top-0 md:mt-0 md:space-x-8 md:flex-row md:bg-transparent">
             {/* Menu Items */}
-            <li className="relative">
+            <li className="relative group">
               <button
                 className="flex items-center justify-between w-full px-3 py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                onClick={toggleDropdownSub}
+                onClick={() => toggleDropdownSub('courses')}
               >
                 Courses{" "}
                 <svg
@@ -133,41 +129,63 @@ export const Navbar = () => {
                   />
                 </svg>
               </button>
-              <div className={`${isDropdownSub ? "hidden" : "block"} absolute z-50 mt-2 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600`}>
+              <div
+                className={`${
+                  activeDropdown === 'courses' ? "block" : "hidden"
+                } absolute z-50 mt-2 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-lg w-44 dark:bg-gray-700 dark:divide-gray-600 transition-opacity duration-300 ease-in-out`}
+                style={{ top: '100%', left: '0' }}
+              >
                 <ul className="py-2 text-sm text-gray-700 dark:text-gray-400">
                   <li>
-                    <Link to="/courses" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> All courses</Link>
+                    <Link
+                      to="/courses"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      All courses
+                    </Link>
                   </li>
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
                       Web Development
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
                       Mobile Development
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                    <a
+                      href="#"
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
                       IT Certifications
                     </a>
                   </li>
                 </ul>
                 <div className="py-1">
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >
                     MY Courses
                   </a>
                 </div>
               </div>
             </li>
             <li>
-              <a
-                href="/err"
+              <Link
+                to="/err"
                 className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
               <Link to="/Pricing" className="block px-3 py-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">

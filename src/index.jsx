@@ -20,63 +20,22 @@ import { Banner1 } from "./components/Banner/Banner";
 import { Contact } from "lucide-react";
 import { Contact1 } from "./components/Contact/Contact";
 
-
-
-
-
-
-
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-
 const WrapperSection = () => {
     return (
   
             <div >
-                {/* <Header /> */}
+
        
                 <Outlet />
                
                 <FooterSection />
                 
-                {/* <FootSection /> */}
+              
             </div>
       
     );
 };
-
-
-// const WrapperCourses = () => {
-//     return (
-  
-//             <div className="">
-//                 {/* <Header /> */}
-            
-//                 <Outlet />
-               
-//                 <FooterSection />
-                
-//                 {/* <FootSection /> */}
-//             </div>
-      
-//     );
-// };
-
-// const WrapperSection1 = () => {
-//     return (
-  
-//             <div className="">
-//                 {/* <Header /> */}
-//                 <Navbar/>
-//                 <Outlet />
-//                 {/* <FootSection /> */}
-//             </div>
-      
-//     );
-// };
-
-
 
 const AppRouter = createBrowserRouter([
     {
@@ -122,7 +81,7 @@ const AppRouter = createBrowserRouter([
             {
                 path: "/Contact",
                 element:(<>
-                <Banner1 name="Contact"/>
+                <Banner1 name="Contact us"/>
                 <Contact1/>
              
         
