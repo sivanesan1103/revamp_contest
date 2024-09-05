@@ -16,7 +16,12 @@ import ProudCards from "./components/ProudSection/Proudcard";
 import Download from "./components/Download/DownloadCard";
 import { Banner } from "flowbite-react";
 import { Price } from "./components/Price/Price";
-import ImageSlider from "./components/ImageSlider/Slider";
+import { Banner1 } from "./components/Banner/Banner";
+import { Contact } from "lucide-react";
+import { Contact1 } from "./components/Contact/Contact";
+
+
+
 
 
 
@@ -90,7 +95,7 @@ const AppRouter = createBrowserRouter([
                         <TopInstructors />
                         <SkilllineSection />
                         <ProudCards />
-                        <ImageSlider />
+                 
                         <Download />
                     </>
                 ),
@@ -98,7 +103,7 @@ const AppRouter = createBrowserRouter([
             {
                 path: "/courses",
                 element:(<>
-      
+                 <Banner1 name="Courses"/>
                 <CourseNavigation />
         
               
@@ -107,7 +112,18 @@ const AppRouter = createBrowserRouter([
             {
                 path: "/Pricing",
                 element:(<>
+                <Banner1 name="Pricing & Plans"/>
                 <Price/>
+             
+        
+              
+                </> ), // Replace 'CourseComponent' with your actual course component
+            },
+            {
+                path: "/Contact",
+                element:(<>
+                <Banner1 name="Contact"/>
+                <Contact1/>
              
         
               
