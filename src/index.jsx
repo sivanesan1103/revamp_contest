@@ -117,7 +117,7 @@ const AppRouter = createBrowserRouter([
              
         
               
-                </> ), // Replace 'CourseComponent' with your actual course component
+                </> ), 
             },
             {
                 path: "/Contact",
@@ -127,9 +127,8 @@ const AppRouter = createBrowserRouter([
              
         
               
-                </> ), // Replace 'CourseComponent' with your actual course component
-            },
-            // Add other routes here
+                </> ),             },
+            
         ],
     },
 ]);

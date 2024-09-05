@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Cart from './cart.svg';
 import { Link } from "react-router-dom";
+import logo from './e-learning-global-community.png';
 
 export const Navbar = () => {
   const [isDropdown, setIsDropdown] = useState(false);
@@ -37,14 +38,15 @@ export const Navbar = () => {
       <div className="relative flex items-center justify-between max-w-screen-xl px-4 py-2 mx-auto">
         {/* Logo */}
         <div className='flex items-center'>
-        <Link to='/' className="flex items-center space-x-2">
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8"
-              alt="Flowbite Logo"
-            />
-         </ Link>
-        </div>
+  <Link to='/' className="flex items-center space-x-2">
+    <img
+      src={logo}
+      className="h-12" // Increase the height here
+      alt="Logo"
+    />
+  </Link>
+</div>
+
 
         {/* Category Button */}
         <div className='items-center hidden md:flex'>

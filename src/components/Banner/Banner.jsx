@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
+import logo from './e-learning-global-community.png';
 export const Banner1 = ({ isWhiteBg ,name}) => {
   const [isDropdown, setIsDropdown] = useState(false);
   const [isDropdownSub, setIsDropdownSub] = useState(false);
@@ -16,14 +16,16 @@ export const Banner1 = ({ isWhiteBg ,name}) => {
       <nav className={`top-0 left-0 w-full z-50 ${navbarStyle} border-gray-200 dark:bg-gray-900 dark:border-gray-700`}>
         <div className="relative flex items-center justify-between max-w-screen-xl px-4 py-2 mx-auto">
           {/* Logo */}
-          <div className='flex items-center'>
-           <Link  to="/" className="flex items-center space-x-2">
-              <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                className="h-8"
-                alt="Flowbite Logo"
-              />
-            </Link>
+      <div className='flex items-center'>
+  <Link to='/' className="flex items-center space-x-2">
+    <img
+      src={logo}
+      className="h-12" // Increase the height here
+      alt="Logo"
+    />
+  </Link>
+
+
           </div>
 
           {/* Category Button */}
